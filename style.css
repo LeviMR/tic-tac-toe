@@ -1,0 +1,92 @@
+/* Estilos gerais*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+} 
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave */
+}
+
+.cell.X {
+    color: #f00; /* Vermelho para o jogador X */
+}
+
+.cell.O {
+    color: #00f; /* Azul para o jogador O */
+} 
+
+#status {
+    font-size: 1.5em;
+    margin: 20px; 
+} 
+
+#reset, #theme-toggle {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+} 
+
+/* Estilos para o modo claro */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+body.light-mode #reset, body.light-mode #theme-toggle {
+    background-color: #007bff;
+    color: #fff;
+}
+
+body.light-mode #reset:hover, body.light-mode #theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .cell {
+    background-color: #444;
+    border-color: #777;
+}
+
+body.dark-mode #reset, body.dark-mode #theme-toggle {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode #reset:hover, body.dark-mode #theme-toggle:hover {
+    background-color: #777;
+}
